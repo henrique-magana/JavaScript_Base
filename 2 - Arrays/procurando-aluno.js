@@ -7,10 +7,17 @@ function exibeNomeeNota(aluno){
     if(listaDeAlunosEMedias[0].includes(aluno)){
         console.log(`${aluno} esta cadastrado`)
 
-        const indice = listaDeAlunosEMedias[0].indexOf(aluno)
+        // const alunos = listaDeAlunosEMedias[0]
+        // const medias = listaDeAlunosEMedias[1]
+
+        const [alunos,medias] = listaDeAlunosEMedias
+
+        const indice = alunos.indexOf(aluno)
 
 
-        console.log(`e sua nota eh ${listaDeAlunosEMedias[1][indice]}`)
+        const mediaDoAluno = medias[indice]
+
+        console.log(`e sua nota eh ${mediaDoAluno}`)
     }else{
         console.log("Aluno nao encontrado")
     }
